@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Kartu Tanda Pengenal</title>
+    <!-- Menggunakan font Inter -->
+    <link
+      rel="stylesheet"
+      href="https://rsms.me/inter/inter.css"
+    />
+    <!-- Menggunakan Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Menggunakan Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Menggunakan Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* CSS Kustom */
+      .id-card {
+        width: 300px;
+        font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+      }
+
+      .bg-animation {
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(to bottom, #77c3ff, #2998ff);
+        overflow: hidden;
+        animation: animateBackground 10s infinite linear;
+      }
+
+      .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        background: url('https://cdn.jsdelivr.net/gh/sgyan-1117/cdn-assets/wave.svg') bottom repeat-x;
+        z-index: -1;
+      }
+
+      @keyframes animateBackground {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 100% 0;
+        }
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(to right, #f3e7e9, #e3eeff);
+      }
+    </style>
+  </head>
+  <body class="bg-animation">
+    <div class="wave"></div>
+    <div class="p-4">
+      <div class="bg-white p-8 rounded-md shadow-md id-card">
+        <div class="flex flex-col items-center">
+          <img
+            src="img/profiles.png"
+            alt="Foto Profil"
+            class="rounded-full h-24 w-24 mb-4"
+          />
+          <h2 class="text-xl font-bold text-white mb-2">TheDekte</h2>
+          <div class="flex space-x-4 mb-4">
+            <a
+              href="https://wa.me/6285608885755"
+              class="text-white hover:text-white"
+            >
+              <i class="fab fa-whatsapp fa-lg"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/thedekte/"
+              class="text-white hover:text-white"
+            >
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a
+              href="https://github.com/Dekte"
+              class="text-white hover:text-white"
+            >
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </div>
+          <p class="text-sm text-white text-center">Saya adalah seorang illustraator, junior backend dev dan editor</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
